@@ -1,0 +1,52 @@
+<html>
+
+
+<script>
+function add()
+{
+num1=parseInt(document.getElementById("num1").value);
+num2=parseInt(document.getElementById("num2").value);
+alert("Addition:"+(num1+num2));
+}
+
+function sub()
+{
+num1=parseInt(document.getElementById("num1").value);
+num2=parseInt(document.getElementById("num2").value);
+alert("Subtraction:"+(num1-num2));
+}
+
+function mul()
+{
+num1=parseInt(document.getElementById("num1").value);
+num2=parseInt(document.getElementById("num2").value);
+alert("Multiplication:"+(num1*num2));
+}
+
+function div()
+{
+num1=parseInt(document.getElementById("num1").value);
+num2=parseInt(document.getElementById("num2").value);
+alert("division:"+(num1/num2));
+}
+
+
+
+</script>
+<body>
+
+    First No: <input type="text" id="num1"/>
+    
+    Second No: <input type="text" id="num2"/>
+    
+    
+    <p id="demo"></p>
+<center><button onClick="add()">ADD</button>
+    <center><button onClick="sub()">SUB</button>
+        <center><button onClick="mul()">MUL</button>
+            <center><button onClick="div()">DIV</button>
+</body>
+</html>
+
+
+

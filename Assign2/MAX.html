@@ -1,0 +1,30 @@
+<html>
+<body>
+<p>
+    Find the largest number
+</p>
+<p id="MAX"></p>
+
+<script>
+
+function findmax()
+{
+    var i;
+    var max=-Infinity;
+    for(i=0;i<arguments.length;i++)
+    {
+        if(arguments[i]>max)
+        {
+            max=arguments[i]
+        }
+    }
+    return max;
+}
+document.getElementById("MAX").innerHTML=findmax(8,2,6,44,32);
+</script>
+
+</body>
+</html>
+
+
+
