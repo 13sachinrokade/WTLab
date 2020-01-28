@@ -11,19 +11,58 @@
         </style>
     <title> Registration From</title>
     <link rel="stylesheet" href="https://www.w3schools.com/html/styles.css">
+   <script>
+    
+        function validateForm()
+        {
+            var x= document.forms["form"]["fname"].value;
+            var y= document.forms["form"]["lname"].value;
+            if(x=="" || y=="")
+            alert("Name field must be filled");
+          else if(x>5)  
+          {
+          alert("Name field ");
+          } 
+        }
+        function validateForm2()
+        {
+            var z= document.getElementById("fn").value;
+            if(isNaN(z)|| x>1 || x<10)
+            {
+document.form.fname.focus();
+return true;}
+          else
+          alert("Name field must be Valid");
+        }
+        function ValidateEmail(inputText)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(inputText.value.match(mailformat))
+{
+document.form.fname.focus();
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+document.form.fname.focus();
+return false;
+}
+}
+    </script>
     </head>
 
     <body>
         <h3 align="middle" style="color:MediumSeaGreen;" > Registration Form</h3>
-        <form>
+        <form name="form" onsubmit= "return (validateForm() & validateForm2() & ValidateEmail(document.form.fname));">
             <fieldset>
                 <legend style="color:DodgerBlue;">Personal Detail</legend>
             First Name:
-            <input type="text" placeholder="firstname">
+            <input type="text" placeholder="firstname" name="fname" id="fn">
             <br>
 
             Last Name:
-            <input type="text" placeholder="lastname">
+            <input type="text" placeholder="lastname" name="lname">
             <br>
             <br>
             Gender:<input type="radio" value="Male">Male
